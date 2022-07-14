@@ -11,7 +11,7 @@ export const CartWidget = () => {
     <div className='div-CartWidget'>
     <ion-icon name="cart-outline">
     </ion-icon>
-    <span className='a'>5</span>
+    <span className='a'>0</span>
     </div>
 
 

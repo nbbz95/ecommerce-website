@@ -12,7 +12,7 @@ import 'react-bootstrap/dist/react-bootstrap.min'
 
 const ItemListContainer =( { greeting } ) =>{
   const [items, setProductos] = useState([]);
-  const {isLoading, setisLoading} = useState (true);
+  const [isLoading, setisLoading] = useState (true);
   const { idcategoria } = useParams ();
 
   useEffect (() => {

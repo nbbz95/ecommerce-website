@@ -16,12 +16,12 @@ export const Item = ( { nombre, imagen, precio, id, descripcion}) =>{
   <Row xs={1} md={2} className="g-4">
       <Col>
       <Card style={{ width: '18rem' }}>
-      <Card.Img src={require(`/public/aseets/img-productos/${imagen}`)} alt={nombre}/>
+      <Card.Img src={imagen} alt={nombre}/>
         <Card.Body>
         <Card.Title>{nombre}</Card.Title>
             <Card.Text>${precio}</Card.Text>
             <Button variant="dark">{descripcion}</Button>
-            <ItemCount />
+            <div><ItemCount /></div>
         </Card.Body>
       </Card>
       </Col>

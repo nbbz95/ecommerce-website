@@ -5,7 +5,7 @@ import "./ItemDetailContainer.css";
 import { data } from './data/data'
 import { useParams } from 'react-router-dom';
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const {isLoading, setisLoading} = useState (true);
     const { idItem } = useParams();

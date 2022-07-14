@@ -7,6 +7,7 @@ import React from 'react';
 
 
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -19,9 +20,9 @@ function Navbar() {
               <img src={logo}/>
           </div>
             <CartWidget />
-            {/* <Link className="link-light" to="#">Productos</Link>
+            <Link className="link-light" to="#">Productos</Link>
             <Link className="link-light" to="#">Servicios</Link>
-            <Link className="link-light" to="#">Nosotros</Link> */}
+            <Link className="link-light" to="#">Nosotros</Link>
           </div>
         </nav>
       </div></>

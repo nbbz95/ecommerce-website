@@ -6,7 +6,7 @@ export const data = [
         precio:2.299,
         descuento:0.8,
         descripcion:'Media',
-        imagen:'/my-app/public/aseets/img-productos/funko1.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/funko1.jpeg?raw=true'
     },
     {
         id:'2',
@@ -15,7 +15,7 @@ export const data = [
         precio:2.299,
         descuento:0.5,
         descripcion:'Alta',
-        imagen:'/my-app/public/aseets/img-productos/funko2.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/funko2.jpg?raw=true'
     },
     {
         id:'3',
@@ -24,7 +24,7 @@ export const data = [
         precio:6.599,
         descuento:0.5,
         descripcion:'Especial',
-        imagen:'/my-app/public/aseets/img-productos/funko3.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/Funko3.jpg?raw=true'
     },
     {
         id:'4',
@@ -33,7 +33,7 @@ export const data = [
         precio:5.899,
         descuento:0.5,
         descripcion:'Funko',
-        imagen:'/my-app/public/aseets/img-productos/funko4.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/funko4.jpg?raw=true'
     },
     {
         id:'5',
@@ -42,7 +42,7 @@ export const data = [
         precio:2.299,
         descuento:0.10,
         descripcion:'Media',
-        imagen:'/my-app/public/aseets/img-productos/funko5.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/funko5.jpg?raw=true'
     },
     {
         id:'6',
@@ -51,6 +51,6 @@ export const data = [
         precio:2.299,
         descuento:0.5,
         descripcion:'Funko',
-        imagen:'/my-app/public/aseets/img-productos/funko6.jpeg'
+        imagen:'https://github.com/nbbz95/ecommerce-website/blob/main/public/aseets/img-productos/funko6.jpg?raw=true'
     }
 ]
