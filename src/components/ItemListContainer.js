@@ -5,6 +5,9 @@ import { data } from './data/data';
 import ItemList from './ItemList'
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap/dist/react-bootstrap.min'
 
 
 const ItemListContainer =( { greeting } ) =>{
