@@ -1,4 +1,6 @@
+import { Button } from "bootstrap";
 import React, { useContext } from "react";
+import { Card } from "react-bootstrap";
 import CartContext from "./CartContext";
 import { data } from "./data/data";
 
@@ -7,27 +9,28 @@ const ItemDetail = () => {
   const { addItemToCart, products } = useContext(CartContext);
 
   return (
-    <div>
+    <Card>
       {products &&
         data.map((product, id) => (
-          <div key={id}>
-            <img src={product.imagen} alt={product.nombre} />
-            <div>
-              <p>
+          <Card.Body key={id}>
+            <Card.Img src={product.imagen} alt={product.nombre} />
+            <Card>
+              <Card.Text>
                 {product.nombre} - ${product.precio}
-              </p>
-            </div>
+              </Card.Text>
+            </Card>
             {!product.inCart ? (
-              <button onClick={() => addItemToCart(product)}>
+              <Button onClick={() => addItemToCart(product)}>
                 agregar al carrito
-              </button>
+              </Button>
             ) : (
-              <button>En el carrito</button>
+              <Button>En el carrito</Button>
             )}
-          </div>
+          </Card.Body>
         ))}
-    </div>
+    </Card>
   );
 };
 
 export default ItemDetail;
+

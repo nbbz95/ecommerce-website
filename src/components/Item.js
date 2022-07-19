@@ -1,32 +1,37 @@
-import  React  from 'react';
+import  React, { useContext }  from 'react';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Col, Row } from 'react-bootstrap';
-import ItemCount from './ItemCount';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { data } from './data/data';
+import CartContext from './CartContext';
 
 
 
 
 
-export const Item = ( { nombre, imagen, precio, id, descripcion}) =>{
+
+export const Item = () =>{
+  const { addItemToCart, products } = useContext(CartContext);
+
   return (
-    <Link to={`/item/${id}`}>
-  <Row xs={1} md={2} className="g-4">
-      <Col>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img src={imagen} alt={nombre}/>
-        <Card.Body>
-        <Card.Title>{nombre}</Card.Title>
-            <Card.Text>${precio}</Card.Text>
-            <Button variant="dark">{descripcion}</Button>
-            <div><ItemCount /></div>
-        </Card.Body>
-      </Card>
-      </Col>
-  </Row>
-  </Link>
-
-  )
-}
+    <div className="productsContainer">
+      {products &&
+        data.map((product, i) => (
+          <div key={i} className="product">
+            <img src={product.img} alt={product.nombre} />
+            <div>
+              <p>
+                {product.nombre} - ${product.precio}
+              </p>
+            </div>
+            {!product.inCart ? (
+              <button onClick={() => addItemToCart(product)}>
+                Add to Cart
+              </button>
+            ) : (
+              <button>En el carrito</button>
+            )}
+          </div>
+        ))}
+    </div>
+  );
+};

@@ -3,6 +3,7 @@ import { useState } from "react"
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
+import { Button } from 'react-bootstrap';
 
 
 
@@ -32,26 +33,14 @@ function Contador({ onAdd }){
 }
 
 return(
-<>
-<div className='card p-3 mb-2 bg-secondary text-white'>
-<div className='d-flex justify-content-center'>
-</div>
-<div className='d-flex justify-content-center'>
-    
-    <p>{num}</p><br/>
+
+<div className='d-grid gap-4 d-md-block'>
+    <Button className='btn btn-primary' onClick={sumar}>Sumar</Button>
+    <Button className='btn btn-primary' onClick={resta}>Restar</Button>
+    <Button className='btn btn-primary' onClick={reiniciar}>Reiniciar!</Button>
+    <Button className='btn btn-primary' onClick={() => onAdd(sumar)}>{" "}Agregar al carrito{" "}</Button>
 </div>
 
-<div className='d-flex justify-content-center'>
-
-    <button className='btn btn-primary' onClick={sumar}>Sumar</button>
-    <button className='btn btn-primary' onClick={resta}>Restar</button>
-    <button className='btn btn-primary' onClick={reiniciar}>Reiniciar!</button>
-    <button className='btn btn-primary' onClick={() => onAdd(sumar)}>{" "}Agregar al carrito{" "}</button>
-
-
-</div>
-</div>
-</>
     )
 }
 
