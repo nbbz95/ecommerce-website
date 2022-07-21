@@ -1,33 +1,31 @@
-import { Button } from "bootstrap";
 import React, { useContext } from "react";
 import { Card } from "react-bootstrap";
 import CartContext from "./CartContext";
-import { data } from "./data/data";
+import ItemCount from "./ItemCount";
 
 
-const ItemDetail = () => {
-  const { addItemToCart, products } = useContext(CartContext);
 
+const ItemDetail = ({product}) => {
+  const { addItemToCart } = useContext(CartContext);
+console.log(product);
   return (
     <Card>
-      {products &&
-        data.map((product, id) => (
-          <Card.Body key={id}>
+          <Card.Body>
             <Card.Img src={product.imagen} alt={product.nombre} />
             <Card>
               <Card.Text>
                 {product.nombre} - ${product.precio}
               </Card.Text>
             </Card>
-            {!product.inCart ? (
+            {/* {!product.inCart ? (
               <Button onClick={() => addItemToCart(product)}>
                 agregar al carrito
               </Button>
             ) : (
               <Button>En el carrito</Button>
-            )}
+            )} */}
+            <ItemCount/>
           </Card.Body>
-        ))}
     </Card>
   );
 };

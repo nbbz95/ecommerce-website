@@ -8,14 +8,14 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const [isLoading, setisLoading] = useState (true);
-    const { idItem } = useParams();
+    const { id } = useParams();
 
         useEffect (() => {
             setisLoading (true);
             const getItems = new Promise ((resolve) => {
                 setTimeout(() => {
 
-                    const myData = data.find((item) => item.id === idItem);
+                    const myData = data.find((item) => item.id === id);
 
                     resolve (myData);
             }, 1000);
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
                 }, []);
 
                 return isLoading ? <h1>Cargando...</h1> :
-                <ItemDetail {...product} />;
+                <ItemDetail product={product} />;
 };
 
 export default ItemDetailContainer;

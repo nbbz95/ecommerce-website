@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 
 
 
-function Contador({ onAdd }){
+function ItemCount({ onAdd }){
     const [num, setNum] = useState();
 
     const sumar = () => {
@@ -46,4 +46,4 @@ return(
 
 
 
-export default Contador;
+export default ItemCount;

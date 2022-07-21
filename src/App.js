@@ -18,7 +18,7 @@ function App() {
 
       <Route path="/" element={<ItemListContainer greeting={'HOME'}/>}/>
       <Route path="/descripcion/:idcategoria" element={<ItemListContainer/>}/>
-      <Route path="/Item/:iditem" element={<ItemDetailContainer />}/>
+      <Route path="/item/:id" element={<ItemDetailContainer />}/>
       <Route path='./components/Cart.js' element={<Cart/>}/>
 
     </Routes>

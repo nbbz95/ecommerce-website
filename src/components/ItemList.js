@@ -5,7 +5,7 @@ import { Item } from './Item';
 export const ItemList = ({ items }) => {
   return (
       <section className='grid'> {items?.map((item) => (
-         <Item {...item} key={item.id} />
+         <Item  product={item}  key={item.id} />
        ))}
      </section>
   );
